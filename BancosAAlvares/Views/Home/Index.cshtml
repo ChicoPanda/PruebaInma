@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Clientes</h2>
+        <p>
+            <a class="btn btn-default" href="@Url.Action("Index","Home")">
+                <img src="~/Content/Images/reunion.png" alt="Clientes" width="128" height="128" />
+                Ir a clientes&raquo;
+            </a>
+        </p>
+        <a href="~/Views/Cuentas/Lista.cshtml">~/Views/Cuentas/Lista.cshtml</a>
+    </div>
+    <div class="col-md-4">
+        <h2>Cuentas</h2>
+        <p>
+            <a class="btn btn-default" href="@Url.Action("Lista","Cuentas")">
+                <img src="~/Content/Images/dolar.png" alt="Cuentas" width="128" height="128" />
+                Ir a cuentas&raquo;
+            </a>
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Notificaciones</h2>
+        <p>
+            <a class="btn btn-default" href="@Url.Action("Index","Home")">
+                <img src="~/Content/Images/licencia.png" alt="Notificaciones" width="128" height="128" />
+                Ir a notificaciones&raquo;
+            </a>
+        </p>
+    </div>
+    <p>
+        @Html.ActionLink("Acerca de...", "About", null, new { @class = "btn btn-primary" });
+    </p>
+</div>
